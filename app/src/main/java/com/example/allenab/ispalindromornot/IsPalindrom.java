@@ -69,7 +69,7 @@ public class IsPalindrom extends AppCompatActivity {
      * @return - true -> current input is a palindrome
      *           false -> current input isn't a palindrome
      */
-    private boolean isPalindrome(String str){
+    public static boolean isPalindrome(String str){
         return str.equalsIgnoreCase(new StringBuilder(str).reverse().toString());
     }
 

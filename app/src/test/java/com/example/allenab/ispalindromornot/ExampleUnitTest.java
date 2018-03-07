@@ -1,5 +1,7 @@
 package com.example.allenab.ispalindromornot;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -11,10 +13,25 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
 
+    private IsPalindrom palindrom;
 
-    @Test
-    public void addition_isCorrect() throws Exception {
 
+    @Before
+    public void setUp(){
+        palindrom = new IsPalindrom();
 
     }
+    @Test
+    public void correctData() throws Exception {
+
+        assertEquals(true, IsPalindrom.isPalindrome("Rentner"));
+    }
+
+    @Test
+    public void incorrectData(){
+
+        assertEquals(false, IsPalindrom.isPalindrome("Affe"));
+    }
+
+
 }
